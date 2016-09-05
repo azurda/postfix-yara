@@ -4,6 +4,7 @@ import sys
 import email
 import yara
 import os
+import json
 
 RULESET_PATH = '/home/usr/rulesets/'
 
