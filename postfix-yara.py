@@ -6,7 +6,8 @@ import yara
 import os
 import json
 
-RULESET_PATH = '/home/usr/rulesets/'
+RULESET_PATH = '/home/usr/rulesets.json'
+COMPILED_RULESET_PATH = ''
 
 CORES = 1
 
@@ -19,7 +20,7 @@ detections = []
 
 def process_payload(payload, ruleset):
   ruleset_name = ruleset
-  ruleset = yara.load(RULESET_PATH + ruleset)
+  ruleset = yara.load(COMPILED_RULESET_PATH  + ruleset)
   if ruleset.match(data=str(payload)):
     detections.append(ruleset_name)
 
