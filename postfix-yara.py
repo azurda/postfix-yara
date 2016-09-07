@@ -7,7 +7,7 @@ import os
 import json
 
 RULESET_PATH = '/home/usr/rulesets.json'
-COMPILED_RULESET_PATH = ''
+COMPILED_RULESET_PATH = '/path/to/rulesets/folder/'
 
 CORES = 1
 
