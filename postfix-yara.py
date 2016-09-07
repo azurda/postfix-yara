@@ -19,7 +19,7 @@ detections = []
 
 def process_payload(payload, ruleset):
   ruleset_name = ruleset
-  ruleset = yara.load(ruleset)
+  ruleset = yara.load(RULESET_PATH + ruleset)
   if ruleset.match(data=str(payload)):
     detections.append(ruleset_name)
 
